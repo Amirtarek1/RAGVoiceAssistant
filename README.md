@@ -1,9 +1,11 @@
 # 🎙️ RAG Voice Assistant (STT → RAG → TTS)
 
 ## Overview
-This project is an **end-to-end voice-based AI assistant** that allows users to ask questions using **speech**, retrieves relevant information from custom documents using **Retrieval-Augmented Generation (RAG)**, and responds back with **spoken answers**.
+This project is an **end-to-end voice-based AI assistant** that allows users to ask questions using **speech**, retrieves relevant information from **real-world documents**, and responds back with **spoken answers**.
 
-The system combines **Speech-to-Text (STT)**, **Vector Search**, **Large Language Models (LLMs)**, and **Text-to-Speech (TTS)** into a single pipeline.
+The system uses **company data from شركة الشفاء الرقمية للرعاية الصحية** as the knowledge base for the **RAG pipeline**, making it capable of answering **domain-specific questions about the company**.
+
+The project combines **Speech-to-Text (STT)**, **Vector Search**, **Large Language Models (LLMs)**, and **Text-to-Speech (TTS)** into a single pipeline.
 
 ---
 
@@ -20,7 +22,7 @@ User Voice
 
 ## ✨ Key Features
 - 🎤 Voice-based query input (STT)
-- 📚 Document-aware responses using RAG
+- 📚 Document-aware responses using **RAG** with real healthcare data from شركة الشفاء الرقمية للرعاية الصحية
 - 🤖 LLM-powered answer generation
 - 🔊 Spoken AI responses (TTS)
 - 🌍 Supports Arabic & English (model-dependent)
@@ -40,7 +42,7 @@ User Voice
 
 ## 📁 Repository Structure
 RAGVoiceAssistant/
-- Data/        → Documents & audio samples  
+- Data/        → Documents & audio samples (including healthcare data from شركة الشفاء الرقمية للرعاية الصحية)  
 - Dummy/       → Experiments & prototypes  
 - NoteBooks/   → STT, RAG, TTS pipelines  
 - Samples/     → Audio examples  
@@ -57,6 +59,7 @@ RAGVoiceAssistant/
 
 ## 🎯 Use Cases
 - Voice-based document question answering
+- Domain-specific healthcare assistants
 - Arabic AI assistants
 - Accessibility tools
 - Knowledge assistants
@@ -69,3 +72,5 @@ RAGVoiceAssistant/
 - Add FastAPI backend and Gradio UI
 - Support real-time streaming audio
 - Dockerize and deploy to cloud platforms
+
+---
