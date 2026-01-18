@@ -1,77 +1,101 @@
-# 🎙️ RAG Voice Assistant (STT → RAG → TTS)
+# 🎙️ RAGVoiceAssistant: AI Call Center Agent (STT → RAG → TTS)
 
 ## Overview
-This project is an **end-to-end voice-based AI assistant** that allows users to ask questions using **speech**, retrieves relevant information from **real-world documents**, and responds back with **spoken answers**.
+**RAGVoiceAssistant** is an **AI call center agent** for **شركة الشفاء الرقمية للرعاية الصحية** in Saudi Arabia.  
 
-The system uses **company data from شركة الشفاء الرقمية للرعاية الصحية** as the knowledge base for the **RAG pipeline**, making it capable of answering **domain-specific questions about the company**.  
+When a customer calls:  
+1. The agent captures **the caller’s voice**.  
+2. Converts it to text using **Speech-to-Text (STT)**.  
+3. Sends the text to a **RAG pipeline** that retrieves answers from **company documents**.  
+4. Generates an **intelligent response** using **`gpt-oss-120b` via OpenRouter**.  
+5. Converts the response to **spoken voice in a Saudi Arabic accent** using **Text-to-Speech (TTS)**.  
+6. Plays the answer **directly to the caller**, fully automated and in real-time.  
 
-The project combines **Speech-to-Text (STT)**, **Vector Search**, **Large Language Models (LLMs)**, specifically **`gpt-oss-120b` from OpenRouter**, and **Text-to-Speech (TTS)** into a single pipeline.
+This ensures **accurate, domain-specific, and culturally natural responses** for Saudi customers.
 
 ---
 
 ## 🔄 System Pipeline
-User Voice  
-→ Speech-to-Text (STT)  
-→ Query Embedding  
-→ Vector Database (FAISS / Chroma)  
-→ Large Language Model (LLM: `gpt-oss-120b` via OpenRouter)  
-→ Text-to-Speech (TTS)  
-→ Audio Response  
+
+Caller Voice
+│
+▼
+Speech-to-Text (STT)
+│
+▼
+Query Embedding
+│
+▼
+Vector Database (FAISS / Chroma)
+│
+▼
+Large Language Model (LLM: gpt-oss-120b via OpenRouter)
+│
+▼
+Text-to-Speech (TTS in Saudi Arabic accent)
+│
+▼
+Spoken Answer to Caller
+
+
+> Note: The **Vector Database** uses **company documents from شركة الشفاء الرقمية**, making responses **domain-aware and accurate**.
 
 ---
 
 ## ✨ Key Features
-- 🎤 Voice-based query input (STT)
-- 📚 Document-aware responses using **RAG** with real healthcare data from شركة الشفاء الرقمية للرعاية الصحية
-- 🤖 LLM-powered answer generation using **`gpt-oss-120b` from OpenRouter**
-- 🔊 Spoken AI responses (TTS)
-- 🌍 Supports Arabic & English (model-dependent)
-- 🧪 Includes experiments and demo notebooks
+- 🎤 Real-time **voice queries from callers**  
+- 📚 **RAG-based answers** using real company documents  
+- 🤖 **`gpt-oss-120b` via OpenRouter** for smart responses  
+- 🔊 **Text-to-Speech in Saudi Arabic accent**  
+- 🌍 Supports **Arabic (primary)** and English  
+- 🧪 Includes notebooks and demos for testing  
 
 ---
 
 ## 🛠️ Tech Stack
-- **Speech-to-Text:** Whisper / Hugging Face
-- **Embeddings:** Sentence Transformers
-- **Vector Store:** FAISS / Chroma
-- **LLM:** `gpt-oss-120b` via OpenRouter
-- **Text-to-Speech:** facebook / tts
-- **Language:** Python
+- **Speech-to-Text:** Whisper / Hugging Face  
+- **Embeddings:** Sentence Transformers  
+- **Vector Store:** FAISS / Chroma  
+- **LLM:** `gpt-oss-120b` via OpenRouter  
+- **Text-to-Speech:** facebook / tts (Saudi accent)  
+- **Language:** Python  
 
 ---
 
 ## 📁 Repository Structure
 RAGVoiceAssistant/
-- Data/        → Documents & audio samples (including healthcare data from شركة الشفاء الرقمية للرعاية الصحية)  
-- Dummy/       → Experiments & prototypes  
-- NoteBooks/   → STT, RAG, TTS pipelines  
-- Samples/     → Audio examples  
-- Video/       → Demo recordings  
+├── Data/ → Company documents & audio samples
+├── Dummy/ → Experiments & prototype notebooks
+├── NoteBooks/ → STT, RAG, TTS pipelines
+├── Samples/ → Audio examples
+├── Video/ → Demo recordings
+├── .gitignore
+└── README.md
+
 
 ---
 
 ## 🔐 Security Best Practices
-- API keys are **never hard-coded**
-- Secrets are loaded via **environment variables**
-- `.env` files are excluded using `.gitignore`
+- API keys are **never hard-coded**  
+- Secrets loaded via **environment variables**  
+- `.env` files ignored via `.gitignore`  
 
 ---
 
 ## 🎯 Use Cases
-- Voice-based document question answering
-- Domain-specific healthcare assistants
-- Arabic AI assistants
-- Accessibility tools
-- Knowledge assistants
-- Educational and enterprise AI systems
+- Automated **call center agent** for healthcare  
+- Domain-specific customer support  
+- Arabic AI assistants **with Saudi accent**  
+- Accessibility & knowledge assistance  
 
 ---
 
-## 🚀 Future Work
-- Convert notebooks into production-ready Python modules
-- Add FastAPI backend and Gradio UI
-- Support real-time streaming audio
-- Dockerize and deploy to cloud platforms
+## 🚀 Future Improvements
+- Real-time **telephony integration** (SIP / Twilio / WebRTC)  
+- Convert notebooks into **production-ready Python modules**  
+- Add **monitoring dashboard** for calls  
+- Stream audio with **low latency**  
+- Dockerize and deploy to cloud platforms  
 
 ---
 
