@@ -78,4 +78,4 @@ RAGVoiceAssistant/
 ## 👨‍💻 Author
 **Amir Tarek**  
 Machine Learning Engineer  
-linked in : https://www.linkedin.com/in/amir-tarek1/
+linkedin : https://www.linkedin.com/in/amir-tarek1/
