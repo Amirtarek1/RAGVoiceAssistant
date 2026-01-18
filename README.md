@@ -3,9 +3,9 @@
 ## Overview
 This project is an **end-to-end voice-based AI assistant** that allows users to ask questions using **speech**, retrieves relevant information from **real-world documents**, and responds back with **spoken answers**.
 
-The system uses **company data from شركة الشفاء الرقمية للرعاية الصحية** as the knowledge base for the **RAG pipeline**, making it capable of answering **domain-specific questions about the company**.
+The system uses **company data from شركة الشفاء الرقمية للرعاية الصحية** as the knowledge base for the **RAG pipeline**, making it capable of answering **domain-specific questions about the company**.  
 
-The project combines **Speech-to-Text (STT)**, **Vector Search**, **Large Language Models (LLMs)**, and **Text-to-Speech (TTS)** into a single pipeline.
+The project combines **Speech-to-Text (STT)**, **Vector Search**, **Large Language Models (LLMs)**, specifically **`gpt-oss-120b` from OpenRouter**, and **Text-to-Speech (TTS)** into a single pipeline.
 
 ---
 
@@ -14,7 +14,7 @@ User Voice
 → Speech-to-Text (STT)  
 → Query Embedding  
 → Vector Database (FAISS / Chroma)  
-→ Large Language Model (LLM)  
+→ Large Language Model (LLM: `gpt-oss-120b` via OpenRouter)  
 → Text-to-Speech (TTS)  
 → Audio Response  
 
@@ -23,7 +23,7 @@ User Voice
 ## ✨ Key Features
 - 🎤 Voice-based query input (STT)
 - 📚 Document-aware responses using **RAG** with real healthcare data from شركة الشفاء الرقمية للرعاية الصحية
-- 🤖 LLM-powered answer generation
+- 🤖 LLM-powered answer generation using **`gpt-oss-120b` from OpenRouter**
 - 🔊 Spoken AI responses (TTS)
 - 🌍 Supports Arabic & English (model-dependent)
 - 🧪 Includes experiments and demo notebooks
@@ -34,8 +34,8 @@ User Voice
 - **Speech-to-Text:** Whisper / Hugging Face
 - **Embeddings:** Sentence Transformers
 - **Vector Store:** FAISS / Chroma
-- **LLM:** OpenAI / Hugging Face Models
-- **Text-to-Speech:** Coqui / gTTS
+- **LLM:** `gpt-oss-120b` via OpenRouter
+- **Text-to-Speech:** facebook / tts
 - **Language:** Python
 
 ---
@@ -74,3 +74,8 @@ RAGVoiceAssistant/
 - Dockerize and deploy to cloud platforms
 
 ---
+
+## 👨‍💻 Author
+**Amir Tarek**  
+Machine Learning Engineer  
+linked in : https://www.linkedin.com/in/amir-tarek1/
