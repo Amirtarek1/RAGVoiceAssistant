@@ -57,7 +57,7 @@ Spoken Answer to Caller
 - **Embeddings:** Sentence Transformers  
 - **Vector Store:** FAISS / Chroma  
 - **LLM:** `gpt-oss-120b` via OpenRouter  
-- **Text-to-Speech:** facebook / tts (Saudi accent)  
+- **Text-to-Speech:** facebook / tts (Saudi accent)  or wasmdashai/vits-ar
 - **Language:** Python  
 
 ---
